@@ -16,7 +16,7 @@ class WorksCategoryModel(models.Model):
 class WorksModel(models.Model):
     category = models.ManyToManyField(WorksCategoryModel)
     title = models.CharField(max_length=255)
-    body = RichTextUploadingField
+    body = RichTextUploadingField()
     created_at = models.DateTimeField(auto_now_add=True)
     works_image = models.ImageField(upload_to='works/')
 
